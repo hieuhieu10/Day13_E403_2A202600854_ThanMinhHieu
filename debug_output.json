@@ -1,0 +1,53 @@
+{
+  "phase": "public",
+  "n": 1,
+  "users": null,
+  "turns": null,
+  "config_used": {
+    "provider": "openai",
+    "model": "gpt-5.4-nano",
+    "model_price_tier": "economy",
+    "max_steps": 8,
+    "loop_guard": true,
+    "temperature": 0.2,
+    "context_size": 3,
+    "verbose_system": false,
+    "retry": {
+      "enabled": true,
+      "max_attempts": 2,
+      "backoff_ms": 150
+    },
+    "cache": {
+      "enabled": true
+    },
+    "normalize_unicode": true,
+    "redact_pii": true,
+    "session_drift_rate": 0.0,
+    "context_reset_every": 4,
+    "tool_error_rate": 0.0,
+    "catalog_override": {},
+    "planner": true,
+    "verify": true,
+    "self_consistency": 2,
+    "tool_budget": 4,
+    "prompt_chars": 1552,
+    "custom_prompt": true
+  },
+  "results": [
+    {
+      "qid": "debug-001",
+      "question": "Mua 3 MacBook voi coupon VIP20, ship Hai Phong - tong cong bao nhieu VND?",
+      "answer": "Cần dùng tool theo thứ tự: **check_stock (MacBook)** → **get_discount (VIP20)** → **calc_shipping (Hai Phong)**.\n\n- Đơn giá: 35,000,000 VND  \n- Số lượng: 3 ⇒ Subtotal = 35,000,000 × 3 = 105,000,000 VND  \n- Giảm giá VIP20: 20% ⇒ discounted = 105,000,000 × (100-20)/100 = 84,000,000 VND  \n- Phí ship (4.8 kg, Hải Phòng): 47,000 VND  \n- Tổng = 84,000,000 + 47,000 = **84,047,000 VND**\n\nTong cong: 84047000 VND",
+      "status": "ok",
+      "session": "debug-001",
+      "turn": 0,
+      "ts": "2026-06-13T00:00:00.107783Z"
+    }
+  ],
+  "sealed": {
+    "alg": "HMAC-SHA256",
+    "note": "binary-measured metrics for scoring; build your own observability in wrapper.py",
+    "data": "W3siZXJyb3IiOiBudWxsLCAibGF0ZW5jeV9tcyI6IDExNDMwLCAibW9kZWwiOiAiZ3B0LTUuNC1uYW5vIiwgInBpaSI6IGZhbHNlLCAicHJvdmlkZXIiOiAib3BlbmFpIiwgInN0ZXBzIjogMywgInRvb2xzX3VzZWQiOiBbImNoZWNrX3N0b2NrIiwgImdldF9kaXNjb3VudCIsICJjYWxjX3NoaXBwaW5nIl0sICJ1c2FnZSI6IHsiY29tcGxldGlvbl90b2tlbnMiOiA0NzAsICJwcm9tcHRfdG9rZW5zIjogMTUwNDIsICJ0b3RhbF90b2tlbnMiOiAxNTUxMn19XQ==",
+    "sig": "9400a2d58428c35b48d8bd1319f32eda8ec6b217a65c62bea860ac87cab1d1f2"
+  }
+}
